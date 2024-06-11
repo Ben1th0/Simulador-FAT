@@ -2,7 +2,8 @@ package Controller;
 
 public class FileEntry {
 
-	private String name;
+	@SuppressWarnings("unused")
+    private String name;
     private boolean isDirectory;
     private String content;
 

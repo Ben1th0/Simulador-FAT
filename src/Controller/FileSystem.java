@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FileSystem {
 
-	private Map<String, FileEntry> files;
+    private Map<String, FileEntry> files;
     private FAT fat;
 
     public FileSystem() {
@@ -57,6 +57,10 @@ public class FileSystem {
         System.out.println("Archivo/Directorio eliminado: " + path);
     }
 
+    public Map<String, FileEntry> getFiles() {
+        return files;
+    }
+    
     public void list(String path) {
         System.out.println("Listando contenidos de: " + path);
         for (String key : files.keySet()) {
@@ -65,10 +69,4 @@ public class FileSystem {
             }
         }
     }
-
-	public Object getFiles() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-    
 }
